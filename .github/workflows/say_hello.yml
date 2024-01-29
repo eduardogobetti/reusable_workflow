@@ -1,0 +1,15 @@
+name: Say Hello
+
+on:
+  workflow_call:
+    inputs:
+      nome:
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compile
+        run: echo "Hello, ${{inputs.nome}} !"
